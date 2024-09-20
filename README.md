@@ -5,9 +5,9 @@
 Auf dem Rechner sollte selbstverstaendlich Java installiert sein.
 Folgende Befehle sind nacheinander auszufuehren, um das Projekt zu verwenden:
 
-javac App.java Fenster.java Kau.java
+`javac App.java Fenster.java Kau.java`
 
-java App
+`java App`
 
 2. Entscheidungen beim Design
 
