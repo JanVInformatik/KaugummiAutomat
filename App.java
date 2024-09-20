@@ -33,6 +33,6 @@ public class App {
       }
       break;
     }
-    Fenster test = new Fenster();
+    Fenster test = new Fenster(kaugummis);
   }
 }

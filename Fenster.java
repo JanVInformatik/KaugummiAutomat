@@ -1,24 +1,45 @@
 import java.awt.*;
+import java.util.ArrayList;
 
-class Fenster {
+class Fenster extends Frame {
+  private ArrayList<Kau> kaugummiListe;
 
-  Fenster() {
-    Frame f = new Frame();
-    Label l = new Label("Produktsortiment...");
-    Button b = new Button("Gib mir einen Kaugummi!");
-    TextField t = new TextField();
+  Fenster(ArrayList<Kau> kaugummiListe) {
+    this.kaugummiListe = kaugummiListe;
+    setTitle("Kaugummi-Generator.");
+    setSize(1280, 720);
+    setVisible(true);
+  }
 
-    l.setBounds(20, 80, 80, 30);
-    t.setBounds(20, 100, 80, 30);
-    b.setBounds(100, 100, 80, 30);
+  public void paint(Graphics g) {
+    int x = 50;
+    int y = 100;
 
-    f.add(b);
-    f.add(l);
-    f.add(t);
+    for (Kau k : kaugummiListe) {
+      g.setColor(getColorFromString(k.getFarbe()));
+      int radius = (int) k.getDurchmesser();
+      g.fillOval(x, y, radius, radius);
 
-    f.setSize(1280, 720);
-    f.setTitle("Kaugummi Automat.");
-    f.setLayout(null);
-    f.setVisible(true);
+      x += radius + 20;
+      if (x > getWidth() - radius) {
+        x = 50;
+        y += radius + 20;
+      }
+    }
+  }
+
+  public Color getColorFromString(String farbe) {
+    switch (farbe.toLowerCase()) {
+      case "rot":
+        return Color.RED;
+      case "grün":
+        return Color.GREEN;
+      case "blau":
+        return Color.BLUE;
+      case "gelb":
+        return Color.YELLOW;
+      default:
+        return Color.GRAY;
+    }
   }
 }

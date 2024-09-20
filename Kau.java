@@ -10,6 +10,14 @@ public class Kau {
   Kau() {
   }
 
+  public double getDurchmesser() {
+    return durchmesser;
+  }
+
+  public String getFarbe() {
+    return farbe;
+  }
+
   public void whoami() {
     System.out.println("Mein Durchmesser ist: " + durchmesser);
     System.out.println("Meine Farbe ist: " + farbe);
