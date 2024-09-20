@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 public class App {
   public static void main(String[] args) {
+
     Scanner scanner = new Scanner(System.in);
     ArrayList<Kau> kaugummis = new ArrayList<>();
 
