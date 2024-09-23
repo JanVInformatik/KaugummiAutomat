@@ -41,3 +41,6 @@ Folgende Befehle sind nacheinander auszufuehren, um das Projekt zu verwenden:
 
 - Ausfuehrung:
   ./Kaugummi
+
+- Kompilierung der zweiten Version (kaugummi_shop.cpp):
+  g++ -std=c++11 -o kaugummi_shop kaugummi_shop.cpp -lsfml-graphics -lsfml-window -lsfml-system
