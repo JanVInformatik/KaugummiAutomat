@@ -30,3 +30,14 @@ Folgende Befehle sind nacheinander auszufuehren, um das Projekt zu verwenden:
 - KEINE Vererbung
   Bei einem solch kleinem Projekt ist das kaum sinnvoll.
   Zudem: Polymorphismus, wo sinnvoll. Nicht, wo machbar oder moeglich.
+
+3. C++ Version
+
+- Abhaengigkeiten:
+  lsfml (einfache Bibliothek fuer 2D Rendering)
+
+- Kompilierung:
+  `g++ -o Kaugummi Kaugummi.cpp -lsfml-graphics -lsfml-window -lsfml-system`
+
+- Ausfuehrung:
+  ./Kaugummi
